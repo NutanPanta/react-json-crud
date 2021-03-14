@@ -40,7 +40,7 @@ const Posts = () => {
     const response = await axios
       .post(baseUrl, formData)
       .catch((err) => console.log('Error: Unable To Post because ', err));
-    console.log(formData);
+    // console.log(formData);
 
     if (response) setPosts([formData, ...posts]);
 
@@ -65,7 +65,7 @@ const Posts = () => {
     const obj = newArr[0];
     if (obj !== undefined) {
       setFormData({ title: obj.title, body: obj.body, id: id });
-      console.log({ title: obj.title, body: obj.body, id: id });
+      // console.log({ title: obj.title, body: obj.body, id: id });
     }
   };
 
@@ -81,7 +81,7 @@ const Posts = () => {
 
       if (response) {
         let updatedPosts = posts.filter((post) => post.id !== id);
-        console.log(updatedPosts);
+        // console.log(updatedPosts);
         const updatedPost = [formData, ...updatedPosts];
         setPosts(updatedPost);
       }
