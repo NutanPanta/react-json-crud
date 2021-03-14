@@ -124,7 +124,7 @@ const Posts = () => {
         <button onClick={() => updatePost(formData.id)}>Update</button>
       </form>
       <ul className='posts'>
-        {posts.map((post, idx) => {
+        {posts.map((post) => {
           const { id, title, body } = post;
           return (
             <li key={id}>
